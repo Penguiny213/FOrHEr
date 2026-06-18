@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Someone Special ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Hearts Background -->
+<div class="hearts"></div>
+
+<!-- =========================
+     LOCK SCREEN
+========================= -->
+<div id="lockScreen" class="screen active">
+
+    <div class="card">
+
+        <h1>🔒 Secret Access</h1>
+
+        <p class="subtitle">
+            Find the clue hidden in the floating pictures 💖
+        </p>
+
+        <input
+            type="password"
+            id="passwordInput"
+            placeholder="Enter Password"
+        >
+
+        <button onclick="checkPassword()">
+            Unlock 💕
+        </button>
+
+        <p id="passwordMessage"></p>
+
+    </div>
+
+    <!-- Floating Images -->
+    <div class="floating-images">
+
+        <img
+            src="img1.jpg"
+            class="float-img"
+            data-clue="Think about our special number 😉"
+        >
+
+        <img
+            src="img2.jpg"
+            class="float-img"
+            data-clue="It's only two digits ❤️"
+        >
+
+        <img
+            src="img3.jpg"
+            class="float-img"
+            data-clue="Sweet sixteen maybe? 👀"
+        >
+
+    </div>
+
+</div>
+
+<!-- =========================
+     QUESTIONS
+========================= -->
+<div id="questionScreen" class="screen">
+
+    <div class="card">
+
+        <!-- Q1 -->
+        <div id="slide1" class="slide active-slide">
+
+            <h2>Am I handsome? 😎</h2>
+
+            <div class="buttons">
+
+                <button onclick="answerQ1(true)">
+                    Yes 💖
+                </button>
+
+                <button onclick="answerQ1(false)">
+                    No 😭
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Q2 -->
+        <div id="slide2" class="slide">
+
+            <h2>Are you really sure about me? 🥺</h2>
+
+            <div class="buttons">
+
+                <button onclick="answerQ2(true)">
+                    Yes 💖
+                </button>
+
+                <button onclick="answerQ2(false)">
+                    No 😭
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Q3 -->
+        <div id="slide3" class="slide">
+
+            <h2>Am I really worth it for you? ❤️</h2>
+
+            <div class="buttons">
+
+                <button onclick="answerQ3(true)">
+                    Yes 💖
+                </button>
+
+                <button onclick="answerQ3(false)">
+                    No 😭
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     FINAL PROPOSAL
+========================= -->
+<div id="finalScreen" class="screen">
+
+    <div class="card final-card">
+
+        <h1>💖 One Last Question 💖</h1>
+
+        <p class="proposal-text">
+            From the moment I met you,
+            life became a little brighter.
+        </p>
+
+        <p class="proposal-text">
+            Thank you for every smile,
+            every laugh,
+            and every moment we've shared.
+        </p>
+
+        <p class="proposal-text">
+            You became someone very special to me. ❤️
+        </p>
+
+        <h2 class="proposal-question">
+            Will you be my girlfriend? 🥺👉👈
+        </h2>
+
+        <button class="yes-btn">
+            YESSSS ❤️
+        </button>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     GALLERY SCREEN
+========================= -->
+<div id="galleryScreen" class="screen">
+
+    <div class="gallery-container">
+
+        <h1>💖 My Favorite Pictures of You 💖</h1>
+
+        <div class="gallery">
+
+            <div class="photo-card">
+                <img src="Messenger_creation_868A45D7-3B5D-4E27-9C84-E32B7C2711DE.jpeg">
+                <p>Your smile melts my heart ❤️</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="Messenger_creation_B6F2CF62-50AF-45E3-B6AA-707783C85F93.jpeg">
+                <p>How are you this cute 😭💖</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="Messenger_creation_3E97426F-09DC-41E2-8146-A83F672376FB.jpeg">
+                <p>My favorite girl 🥺💕</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="Messenger_creation_0552371E-4105-477F-A60B-D32D0C2B1B99.jpeg">
+                <p>Beautiful as always 🌸</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="Messenger_creation_1186A799-C841-4E1B-87B0-E4CE05A2C014.jpeg">
+                <p>My babbyyyyy ❤️</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="Messenger_creation_3D8C3F07-F3D4-4FB3-AEB5-B5354952AA88.jpeg">
+                <p>My sunshine on a cloudy day ☀️❤️</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="Messenger_creation_00B6646A-5B85-4171-AA2B-CC257757E9C3.jpeg">
+                <p>I could stare everyday</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="Messenger_creation_194DD50D-0F49-418A-B23B-A02C5F767BAB.jpeg">
+                <p>Every moment with you is a treasure 💖</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="Messenger_creation_9CE4D92D-345C-4DC4-AEF5-6E212CE35B98.jpeg">
+                <p>My heart skips a beat just looking at you 💗</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="Messenger_creation_C261A7D4-210E-414B-A653-43E6D9D38735.jpeg">
+                <p>Forever grateful to have you in my life 💕</p>
+            </div>
+
+        </div>
+
+        <div class="love-message">
+
+            <h2>
+                Every picture reminds me
+                how lucky I am to know you 💗
+            </h2>
+
+            <h1>
+                I Love You ❤️
+            </h1>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     CLUE POPUP
+========================= -->
+<div id="popup" class="popup">
+
+    <div class="popup-content">
+
+        <p id="popupText"></p>
+
+        <button onclick="closePopup()">
+            Close 💕
+        </button>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     FLIRTY POPUP
+========================= -->
+<div id="lovePopup" class="popup">
+
+    <div class="popup-content love-popup">
+
+        <img
+            src="flirty-blushing.gif"
+            class="love-image"
+            alt="Cute Surprise"
+        >
+
+        <h2>💖 YAYYYYYY 💖</h2>
+
+        <p>
+            Congratulations ❤️
+        </p>
+
+        <p>
+            You're officially stuck with me now 😘💕
+        </p>
+
+        <p>
+            Unlimited hugs,
+            compliments,
+            and good morning texts unlocked 💗
+        </p>
+
+        <button onclick="closeLovePopup()">
+            AWWWW 💕
+        </button>
+
+    </div>
+
+</div>
+
+<!-- MUSIC -->
+<audio id="bgMusic">
+    <source src="Aphrodite - The Ridleys (Lyrics).mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
