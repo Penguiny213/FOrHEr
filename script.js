@@ -37,25 +37,51 @@ function closePopup(){
 // ======================
 
 function checkPassword(){
+    
+
+    const hint=[
+    "👀 Look at the floating images...",
+    "💡 The answer is hiding in the clues 💕",
+    "🔍 Try observing the pictures carefully...",
+    "💖 It's something meaningful between us..."
+    ];
+
 
     const input =
     document.getElementById("passwordInput").value;
 
+    const message =
+    document.getElementById("passwordMessage");
+
+    const lockScreen =
+    document.getElementById("lockScreen");
+
     if(input === PASSWORD){
 
-        document
-        .getElementById("lockScreen")
-        .classList.remove("active");
+        message.style.color = "#ff4f8b";
+        message.innerText = "💖 Please continue...";
 
-        document
-        .getElementById("questionScreen")
-        .classList.add("active");
+        setTimeout(() => {
+
+            document
+            .getElementById("lockScreen")
+            .classList.remove("active");
+
+            document
+            .getElementById("questionScreen")
+            .classList.add("active");
+
+        }, 1000);
 
     }else{
+        lockScreen.classList.add("shake");
 
-        document
-        .getElementById("passwordMessage")
-        .innerText = "Wrong Password 😝";
+        setTimeout(() => {
+            lockScreen.classList.remove("shake");
+        }, 400);
+
+        message.style.color = "#ff4f8b";
+        message.innerText = hint[Math.floor(Math.random() * hint.length)];
     }
 }
 
